@@ -21,6 +21,8 @@ namespace SalesWebMvc.Controllers
             return View();
         }
 
+
+        // Busca simples
         public async Task<IActionResult> SimpleSearch(DateTime? minDate, DateTime? maxDate)
         {
             if (!minDate.HasValue)
@@ -37,6 +39,7 @@ namespace SalesWebMvc.Controllers
             return View(result);
         }
 
+        // Busca Agrupada
         public async Task<IActionResult> GroupingSearch(DateTime? minDate, DateTime? maxDate)
         {
             if (!minDate.HasValue)
